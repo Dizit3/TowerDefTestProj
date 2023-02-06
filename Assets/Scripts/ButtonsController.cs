@@ -8,7 +8,7 @@ public class ButtonsController : MonoBehaviour
 
     public void Exit()
     {
-        
+        Debug.Log("Exit");
         
     }
 }
