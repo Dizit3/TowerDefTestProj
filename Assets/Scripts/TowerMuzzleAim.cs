@@ -36,14 +36,14 @@ public class TowerMuzzleAim : MonoBehaviour
         if (hitEnemies.Length > 0)
         {
             hitEnemies[0].GetComponent<Enemy>().TakeDamage(attackDamage);
-            AimToFirst(hitEnemies[0].transform.position);
+            AimToEnemy(hitEnemies[0].transform.position);
         }
 
     }
 
 
 
-    private void AimToFirst(Vector3 target)
+    private void AimToEnemy(Vector3 target)
     {
         transform.LookAt(target);
     }
