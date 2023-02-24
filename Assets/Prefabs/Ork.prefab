@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6508582269461539910}
   - component: {fileID: 1478335912108078890}
-  - component: {fileID: -1675441850273197412}
   - component: {fileID: 6536087568116371843}
   - component: {fileID: -3954714270743140121}
   - component: {fileID: -3799661848917796799}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +48,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.05
-  m_Speed: 1
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -61,18 +60,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
---- !u!114 &-1675441850273197412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302269413102836652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77da5d17a565a2f4289f90af956e7af6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &6536087568116371843
 BoxCollider:
   m_ObjectHideFlags: 0
