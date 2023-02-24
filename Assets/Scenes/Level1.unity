@@ -1971,6 +1971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 3795253314948904847, guid: d4c4855fd7e21e34b87f40659a1b26e1, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4c4855fd7e21e34b87f40659a1b26e1, type: 3}
 --- !u!1 &849981409
@@ -2386,7 +2390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071067, y: 0.00000023841858, z: -0.00000013411045, w: 0.7071068}
-  m_LocalPosition: {x: -0.64499986, y: 11.218748, z: -0.02499925}
+  m_LocalPosition: {x: 1.1760426, y: 4.231718, z: -2.7099996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5373,7 +5377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2399217992755439099, guid: c860d512fec1e3946addacbcbf4cfecc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.25
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 2399217992755439099, guid: c860d512fec1e3946addacbcbf4cfecc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5381,7 +5385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2399217992755439099, guid: c860d512fec1e3946addacbcbf4cfecc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.9
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 2399217992755439099, guid: c860d512fec1e3946addacbcbf4cfecc, type: 3}
       propertyPath: m_LocalRotation.w

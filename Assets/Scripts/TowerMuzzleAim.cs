@@ -1,50 +1,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TowerMuzzleAim : MonoBehaviour
 {
     private List<GameObject> currentCollisions;
     private GameObject currentEnemy = null;
-    [SerializeField]private int attackDamage = 0;
+    [SerializeField]private int attackDamage = 20;
     private float attackRange = 2f;
 
+
+    [SerializeField]private float delayTime = 0.1f; // Время задержки в секундах
+    private float lastUpdateTime; // Время последнего обновления
     private void Awake()
     {
         currentCollisions = new List<GameObject>();
     }
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        //m_CurrentCollisions.Add(collision.gameObject); //Добавляем врагов в список текущих целей в радиусе видимости башни
-    }
-
-
-
-    private void OnTriggerExit(Collider collision)
-    {
-    //    int index = m_CurrentCollisions.FindIndex(
-    //x => x.gameObject == collision.gameObject); // Находим индекс врагов вышедших за пределы радиуса действия башни
-
-    //    m_CurrentCollisions.RemoveAt(index); //Удаляем врагов вышедших за пределы радиуса действия башни
-    }
-
     private void Update()
     {
 
-        Collider[] hitEnemies = Physics.OverlapSphere(transform.position, attackRange, LayerMask.GetMask("Enemies"));
-        if (hitEnemies.Length > 0)
+        Collider[] detectedEnemies = Physics.OverlapSphere(transform.position, attackRange, LayerMask.GetMask("Enemies"));
+        if (detectedEnemies.Length > 0)
         {
-            hitEnemies[0].GetComponent<Enemy>().TakeDamage(attackDamage);
-            AimToEnemy(hitEnemies[0].transform.position);
+
+            if (Time.time - lastUpdateTime >= delayTime)
+            {
+                // Выполняем нужные действия
+                detectedEnemies[0].GetComponent<Enemy>().TakeDamage(attackDamage);
+
+                // Обновляем время последнего обновления
+                lastUpdateTime = Time.time;
+            }
+            
+            AimToEnemy(detectedEnemies[0].transform.position);
         }
 
     }
-
-
 
     private void AimToEnemy(Vector3 target)
     {
         transform.LookAt(target);
     }
+
 }

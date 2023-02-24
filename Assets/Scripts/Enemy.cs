@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private int health = 100;
+  [SerializeField]  private int health = 100;
 
     private void OnTriggerEnter(Collider collision)
     {
