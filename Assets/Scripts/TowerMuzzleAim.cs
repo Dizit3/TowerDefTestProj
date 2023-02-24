@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TowerMuzzleAim : MonoBehaviour
 {
-    private List<GameObject> m_CurrentCollisions;
-    private GameObject m_CurrentEnemy = null;
-    private int attackDamage = 25;
+    private List<GameObject> currentCollisions;
+    private GameObject currentEnemy = null;
+    [SerializeField]private int attackDamage = 0;
     private float attackRange = 2f;
 
     private void Awake()
     {
-        m_CurrentCollisions = new List<GameObject>();
+        currentCollisions = new List<GameObject>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -36,20 +36,15 @@ public class TowerMuzzleAim : MonoBehaviour
         if (hitEnemies.Length > 0)
         {
             hitEnemies[0].GetComponent<Enemy>().TakeDamage(attackDamage);
+            AimToFirst(hitEnemies[0].transform.position);
         }
-
-
-        if (m_CurrentCollisions.Count > 0)
-            AimToFirst(m_CurrentCollisions.First());
-
 
     }
 
 
 
-    private void AimToFirst(GameObject obj)
+    private void AimToFirst(Vector3 target)
     {
-        m_CurrentEnemy = obj;
-        transform.LookAt(m_CurrentEnemy.transform.position);
+        transform.LookAt(target);
     }
 }
