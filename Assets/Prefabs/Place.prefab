@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2399217992755439099}
+  - component: {fileID: 1430674406888695088}
   m_Layer: 0
   m_Name: Place
   m_TagString: Untagged
@@ -32,6 +33,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1430674406888695088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405040793039966953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdac1bd51a161474c8af2488b7a88d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3198546898972898931
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +56,6 @@ GameObject:
   - component: {fileID: 2223178656156570260}
   - component: {fileID: 5190742454912375006}
   - component: {fileID: 2092177255062043879}
-  - component: {fileID: 7985171235823411778}
   m_Layer: 0
   m_Name: Foundation
   m_TagString: Untagged
@@ -116,16 +128,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7985171235823411778
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3198546898972898931}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
