@@ -4,18 +4,22 @@ using UnityEngine.AI;
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField] private GameObject[] enemyPref;
-    [SerializeField] private GameObject[] enemySpawn;
-    [SerializeField] private GameObject[] enemyTarget;
+    [SerializeField] private GameObject enemyPref;
+    [SerializeField] private GameObject enemySpawn;
+    [SerializeField] private Transform[] waypoints;
 
 
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
-            if (enemyPref.Length > 0)
+            if (enemyPref != null && enemySpawn != null)
+
             {
-                GameObject newEnemy = Instantiate(enemyPref[0], enemySpawn[0].transform.position, Quaternion.identity);
+                GameObject enemy = Instantiate(enemyPref, enemySpawn.transform.position, Quaternion.identity);
+
+                
+
             }
 
     }

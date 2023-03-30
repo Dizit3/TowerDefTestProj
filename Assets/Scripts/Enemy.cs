@@ -1,8 +1,11 @@
+using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
   [SerializeField]  private int health = 100;
+    private List<Transform> targetWaypoint;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -19,5 +22,10 @@ public class Enemy : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    private void Awake()
+    {
+        
     }
 }
